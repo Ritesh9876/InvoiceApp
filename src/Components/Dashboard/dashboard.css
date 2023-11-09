@@ -1,0 +1,32 @@
+.dashboard-container{
+    width:100%;
+    display:flex;
+}
+.dashboard-left-container{
+    width:20%;
+}
+.dashboard-add-invoice-button{
+    margin-left:50px;
+    margin-top:50px;
+}
+.dashboard-right-container{
+    width:80%;
+}
+@media (max-width: 600px) {
+    .dashboard-container{
+        flex-direction:column;
+    }
+    .dashboard-left-container{
+        width:100%;
+        display:flex;
+        justify-content:center;
+    }
+    .dashboard-right-container{
+        width:100%;
+    }
+    .dashboard-add-invoice-button{
+        margin-left:0px;
+        margin-right:0px;
+        margin-top:50px;
+    }
+  }
