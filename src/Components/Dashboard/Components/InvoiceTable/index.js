@@ -30,11 +30,11 @@ function InvoiceTable() {
 					<tr className="invoice-table-row">
 						<th className="font_16_600"></th>
 						<th className="font_16_600 d-flex justify-content-left">Name</th>
-						<th className="font_16_600 d-flex justify-content-left">Date</th>
+						<th className="font_16_600 d-flex justify-content-left">Due Date</th>
 						<th className="font_16_600 d-flex justify-content-left" >Client</th>
 						<th className="font_16_600 d-flex justify-content-left">Price</th>
 						<th className="font_16_600 d-flex justify-content-left" >Status</th>
-						<th className="font_16_600 d-flex justify-content-left" >
+						<th className="font_16_600 d-flex justify-content-center" >
 							<p>View</p>
 						</th>
 
@@ -72,7 +72,15 @@ function InvoiceTable() {
 										</p>
 									</td>
 									<td className="font_14_400 d-flex justify-content-left align-items-center">
-										<p className="orange-chip">pending</p>
+										{
+											currentInvoice.status==="pending" ? 
+											<p className="orange-chip">pending</p>
+											:
+											currentInvoice.status==="paid" ?
+											<p className="green-chip">paid</p>
+											:
+											<p className="purple-chip">unpaid</p>
+										}
 									</td>
 									<td className="font_14_400 d-flex justify-content-center align-items-center">
 									<Button 
